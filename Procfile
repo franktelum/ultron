@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n ultron
+web: bin/hubot --adapter slack --name ultron

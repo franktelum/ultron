@@ -8,5 +8,5 @@
 #
 
 module.exports = (robot) ->
-  robot.hear /hi|hello ultron|@ultron/i, (msg) ->
+  robot.hear /(?:hi|hello) (?:ultron|@ultron)/i, (msg) ->
     msg.send "Hi there! Humanity is doomed." 

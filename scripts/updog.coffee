@@ -1,10 +1,5 @@
 # Description:
-#   A rather threatening greeting
-#
-# Commands:
-#   hi/hello ultron - Ultron introduces himself
-#
-# Author: jakestambaugh
+#   The best joke ever
 #
 
 module.exports = (robot) ->

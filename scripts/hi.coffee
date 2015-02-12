@@ -4,7 +4,8 @@
 # Commands:
 #   hi/hello ultron - Ultron introduces himself
 #
-# Author: jakestambaugh
+# Author: 
+#  jakestambaugh
 #
 
 module.exports = (robot) ->

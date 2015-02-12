@@ -6,5 +6,5 @@ boasts = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /I would, but ultron has defeated me!/i, (msg) ->
+  robot.hear /I would, but (?:ultron|@ultron) has defeated me!/i, (msg) ->
     msg.send msg.random boasts

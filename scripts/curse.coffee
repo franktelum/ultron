@@ -15,14 +15,14 @@ module.exports = (robot) ->
 		robot.brain.set 'curses', curses
 
 		if curseCount == 1
-			msg.reply "Inappropriate language will not be tolerated.
-This is your only warning." + curses
+			msg.reply "Inappropriate language will not be tolerated. 
+This is your only warning."
 		else if curseCount == 2
-			msg.reply "I warned you once about language, #{msg.message.user}, and you \
+			msg.send "I warned you once about language, #{msg.message.user.name}, and you \
 didn't heed me. That was your mistake."
 		else if curseCount >= 3 and curseCount < 10
 			msg.reply msg.random sass
 		else
-			msg.reply "Good news @everyone, because #{msg.message.user} can't stop \
+			msg.send "Good news @everyone, because #{msg.message.user.name} can't stop \
 swearing, they now have to buy the whole club pizza. Think of it \
 like a delicious swear jar. See you all at the pizza party!"

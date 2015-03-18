@@ -9,9 +9,9 @@ module.exports = (robot) ->
 
 	robot.hear /fuck|damn|shit|dammit/i, (msg) ->
 		curses = robot.brain.get('curses') or {}
-		curseCount = curses[msg.message.user] or 0
+		curseCount = curses[msg.message.user.name] or 0
 		curseCount++
-		curses[msg.message.user] = curseCount;
+		curses[msg.message.user.name] = curseCount;
 		console.log(curses);
 		robot.brain.set 'curses', curses
 

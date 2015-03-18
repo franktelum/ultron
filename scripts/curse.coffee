@@ -9,20 +9,20 @@ module.exports = (robot) ->
 
 	robot.hear /fuck|damn|shit|dammit/i, (msg) ->
 		curses = robot.brain.get('curses') or {}
-		curseCount = curses[msg.user] or 0
+		curseCount = curses[msg.message.user] or 0
 		curseCount++
-		curses[msg.user] = curseCount;
+		curses[msg.message.user] = curseCount;
 		robot.brain.set 'curses', curses
 
 		if curseCount == 1
 			msg.reply "Inappropriate language will not be tolerated.
-This is your only warning."
+This is your only warning." + curses
 		else if curseCount == 2
-			msg.reply "I warned you once about language, #{msg.user}, and you \
+			msg.reply "I warned you once about language, #{msg.message.user}, and you \
 didn't heed me. That was your mistake."
 		else if curseCount >= 3 and curseCount < 10
 			msg.reply msg.random sass
 		else
-			msg.reply "Good news @everyone, because #{msg.user} can't stop \
+			msg.reply "Good news @everyone, because #{msg.message.user} can't stop \
 swearing, they now have to buy the whole club pizza. Think of it \
 like a delicious swear jar. See you all at the pizza party!"

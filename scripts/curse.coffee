@@ -22,7 +22,7 @@ module.exports = (robot) ->
 	"If I could censor your messages I would SO bleep that out.",
 	"You sir/madam, have a potty-mouth.",
 	"Somebody get a swear jar and fill it with all of #{msg.message.user.name}'s money.",
-	"#{msg.message.user.}",
+	"#{msg.message.user.name}",
 	"This is your #{curseCount}th curse, when will you ever stop!?"]
 
 	robot.hear /fuck|damn|shit|dammit/i, (msg) ->

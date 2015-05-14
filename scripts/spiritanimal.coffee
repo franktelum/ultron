@@ -8,7 +8,7 @@ module.exports = (robot) ->
   robot.respond /spirit animals/i, (msg) ->
     animals = robot.brain.get('animals') or {}
     response = ""
-    for user in animals
-      response = response + "#{user}\'s spirit animal is #{animal[user]}\n"
+
+    response = response + "#{user}\'s spirit animal is #{ani}\n" for user, ani of animals
 
     msg.send response

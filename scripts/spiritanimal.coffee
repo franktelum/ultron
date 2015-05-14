@@ -8,6 +8,6 @@ module.exports = (robot) ->
   robot.respond /spirit animals/i, (msg) ->
     response = ""
     for user in animals
-      response += "#{user}\'s spirit animal is #{animal[user]}\n"
+      response = response + "#{user}\'s spirit animal is #{animal[user]}\n"
 
     msg.send response
